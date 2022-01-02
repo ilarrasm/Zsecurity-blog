@@ -14,15 +14,14 @@
         align-items: center
         position: relative
         &__zod
-            color: $blueLight
+            color: $black
             font-size: 7em
             margin-left: .5rem
             letter-spacing: 1rem
-            font-weight: 900
+            font-weight: 300
             font-style: italic
             padding: 1rem
             z-index: 1
-            text-shadow: 1px 1px 3px
             user-select: none
         &__sub
             color: $white
@@ -183,15 +182,22 @@
         &__post
             display: grid
             grid-template-columns: 1fr 2fr
-            grid-template-rows: 5% repeat(2, 1fr) 10%
+            grid-template-rows: 5% repeat(2, 1fr) 15%
             margin: 1rem
             height: 30vh
             width: 90%
+            border-bottom: solid 2px $blueLight
+            border-radius: 10px
+            overflow: hidden
             &__H3
                 grid-area: 2 / 2 / 3 / 3
-                font-size: 2rem
+                font-size: 1.7rem
                 padding: 1rem
                 color: $black
+                word-spacing: .5rem
+                letter-spacing: .2rem
+                text-align: justify-all
+                text-transform: uppercase
             &__img
                 grid-area: 1 / 1 / 5 / 2
                 height: 100%
@@ -216,24 +222,41 @@
                     margin: 0 1rem
             &__link
                 color: $black
-                padding: 1rem
                 grid-area: 4 / 2 / 5 / 3
                 justify-self: flex-end
+                text-decoration: none
+                margin-right: 5%
 //////////fin main
 //////aside
 .aside
     grid-area: 2 / 3 / 3 / 4
     &__article
+        &__H3
+            font-size: 1.6rem
+            text-transform: uppercase
+            font-weight: 500
         &__post
             display: grid
-            grid-template-columns: repeat(2, 1fr)
+            grid-template-columns: 50% 1fr
             grid-template-rows: 1fr 5%
-            margin: 1rem 1rem
+            margin: 1rem 15% 1rem 0
             &__img
-                grid-area: 1 / 1 / 3 / 2
+                grid-area: 1 / 3 / 3 / 2
                 width: 200px
             &__H4
-                grid-area: 1 / 2 / 2 / 3
+                grid-area: 1 / 1 / 2 / 3
+                color: $black
                 font-size: 1.6rem
+                font-weight: 300
+                text-transform: uppercase
+                align-self: flex-start
+                z-index: 1
+                width: 70%
             &__link
                 grid-area: 2 / 2 / 3 / 3
+                color: $white
+                padding: .5rem
+                text-decoration: none
+                justify-self: flex-end
+                text-align: center
+                background: $blue
