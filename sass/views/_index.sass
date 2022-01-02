@@ -1,7 +1,7 @@
 .bodyIndex
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: 100% 1fr 1fr
     background: white
 /////////////
 .header
@@ -171,7 +171,15 @@
     display: flex
     flex-direction: column
     height: 100%
+    padding: 0 5%
+    &__H2
+        font-size: 3rem
+        align-self: center
+        margin-bottom: 1rem
     &__article
+        display: flex
+        flex-direction: column
+        justify-content: space-around
         &__post
             display: grid
             grid-template-columns: 1fr 2fr

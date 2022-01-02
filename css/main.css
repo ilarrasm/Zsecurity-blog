@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 .bodyIndex {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 100% 1fr 1fr;
   background: white; }
 
 .header {
@@ -187,46 +187,55 @@ h1, h2, h3, h4 {
   grid-area: 2 / 1 / 3 / 3;
   display: flex;
   flex-direction: column;
-  height: 100%; }
-  .main__article__post {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 5% repeat(2, 1fr) 10%;
-    margin: 1rem;
-    height: 30vh;
-    width: 90%; }
-    .main__article__post__H3 {
-      grid-area: 2 / 2 / 3 / 3;
-      font-size: 2rem;
-      padding: 1rem;
-      color: #181717; }
-    .main__article__post__img {
-      grid-area: 1 / 1 / 5 / 2;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 10px; }
-    .main__article__post__p {
-      grid-area: 3 / 2 / 4 / 3;
-      color: #181717;
-      padding: 0 1rem;
-      margin-left: 5%; }
-    .main__article__post__date {
-      grid-area: 1 / 2 / 2 / 3;
-      color: #181717;
-      display: flex;
-      justify-content: flex-end;
-      align-self: flex-start;
-      margin-bottom: 1rem; }
-      .main__article__post__date__fecha {
-        margin: 0 1rem; }
-      .main__article__post__date__cat {
-        margin: 0 1rem; }
-    .main__article__post__link {
-      color: #181717;
-      padding: 1rem;
-      grid-area: 4 / 2 / 5 / 3;
-      justify-self: flex-end; }
+  height: 100%;
+  padding: 0 5%; }
+  .main__H2 {
+    font-size: 3rem;
+    align-self: center;
+    margin-bottom: 1rem; }
+  .main__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .main__article__post {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 5% repeat(2, 1fr) 10%;
+      margin: 1rem;
+      height: 30vh;
+      width: 90%; }
+      .main__article__post__H3 {
+        grid-area: 2 / 2 / 3 / 3;
+        font-size: 2rem;
+        padding: 1rem;
+        color: #181717; }
+      .main__article__post__img {
+        grid-area: 1 / 1 / 5 / 2;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px; }
+      .main__article__post__p {
+        grid-area: 3 / 2 / 4 / 3;
+        color: #181717;
+        padding: 0 1rem;
+        margin-left: 5%; }
+      .main__article__post__date {
+        grid-area: 1 / 2 / 2 / 3;
+        color: #181717;
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-start;
+        margin-bottom: 1rem; }
+        .main__article__post__date__fecha {
+          margin: 0 1rem; }
+        .main__article__post__date__cat {
+          margin: 0 1rem; }
+      .main__article__post__link {
+        color: #181717;
+        padding: 1rem;
+        grid-area: 4 / 2 / 5 / 3;
+        justify-self: flex-end; }
 
 .aside {
   grid-area: 2 / 3 / 3 / 4; }
