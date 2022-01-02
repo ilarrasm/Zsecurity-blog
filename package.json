@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path sass sass/main.sass css/main.css",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\""
+  }
+}
