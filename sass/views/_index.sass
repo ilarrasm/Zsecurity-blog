@@ -2,7 +2,7 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: 100% 1fr 1fr
-    background: white
+    background: $white
 /////////////
 .header
     grid-area: 1 / 1 / 2 / 4
@@ -15,16 +15,16 @@
         position: relative
         &__zod
             color: $black
-            font-size: 7em
+            font-size: 5em
             margin-left: .5rem
             letter-spacing: 1rem
-            font-weight: 300
+            font-weight: 100
             font-style: italic
             padding: 1rem
             z-index: 1
             user-select: none
         &__sub
-            color: $white
+            color: $blue
             position: absolute
             top: 89%
             left: 8%
@@ -36,9 +36,9 @@
             font-style: italic
             font-weight: 500
             text-transform: uppercase
-            background: $blackTransparent
+            border-radius: 10px
             z-index: 1
-            box-shadow: 5px -3px 2px $blackTransparent1
+            box-shadow: 5px 3px 2px $blackTransparent1
             user-select: none
             text-align: right
             padding-top: 1%
@@ -48,12 +48,13 @@
     grid-area: 1 / 1 / 2 / 13
     display: flex
     align-items: center
+    justify-self: center
     justify-content: space-around
     background: $black
 .user
     display: flex
     align-items: center
-    align-self: flex-start
+    align-self: center
     justify-self: flex-end
     margin: 2%
     .fa-user, &__a
@@ -93,6 +94,10 @@
     background: $black
     padding: 1rem
     align-self: center
+.user
+    align-items: center
+    .fa-user
+    &__a
 ////////////           
 .navbar
     padding: 1rem
@@ -148,7 +153,7 @@
                 font-size: 3rem
                 margin: 1rem
             &__date
-                grid-area: 1 / 11 / 2 /13
+                grid-area: 1 / 10 / 2 /13
                 color: $white
                 border-left: solid 5px $blueLight
                 padding: .3rem
@@ -160,9 +165,13 @@
             &__a
                 color: $blueLight
                 grid-area: 4 / 11 / 5 / 13
-.user
-    .fa-user
-    &__a
+                background: $white
+                padding: 1rem
+                align-self: center
+                justify-self: center
+                border-radius: 5px
+                text-decoration: none
+                text-transform: uppercase
 //////////FIN HEAD
 /////////Main
 .main
@@ -175,57 +184,82 @@
         font-size: 3rem
         align-self: center
         margin-bottom: 1rem
+        text-transform: uppercase
+        color: $black
     &__article
         display: flex
         flex-direction: column
         justify-content: space-around
         &__post
             display: grid
-            grid-template-columns: 1fr 2fr
-            grid-template-rows: 5% repeat(2, 1fr) 15%
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr 5%
             margin: 1rem
             height: 30vh
             width: 90%
-            border-bottom: solid 2px $blueLight
+            border-top: solid 5px $blue
             border-radius: 10px
             overflow: hidden
             &__H3
-                grid-area: 2 / 2 / 3 / 3
+                grid-area: 2 / 1 / 4 / 3
                 font-size: 1.7rem
                 padding: 1rem
-                color: $black
+                color: $white
+                background: $blueLightTransparent
                 word-spacing: .5rem
                 letter-spacing: .2rem
                 text-align: justify-all
                 text-transform: uppercase
+                z-index: 1
             &__img
-                grid-area: 1 / 1 / 5 / 2
+                grid-area: 1 / 1 / 4 / 3
                 height: 100%
                 width: 100%
                 object-fit: cover
-                border-radius: 10px
-            &__p
-                grid-area: 3 / 2 / 4 / 3
-                color: $black
-                padding: 0 1rem
-                margin-left: 5%
             &__date
                 grid-area: 1 / 2 / 2 / 3
-                color: $black
                 display: flex
                 justify-content: flex-end
                 align-self: flex-start
-                margin-bottom: 1rem
+                margin: 1rem
+                z-index: 2
                 &__fecha
-                    margin: 0 1rem
+                    color: $white
+                    padding: 1rem
+                    border-radius: 5px
+                    margin-right: 5%
+                    font-size: .5rem
+                    border-left: solid 3px $blueLight
+                    background: $black
                 &__cat
-                    margin: 0 1rem
+                    color: $white
+                    border-left: solid 3px $blueLight
+                    background: $black
+                    padding: 1rem
+                    border-radius: 5px
+                    font-size: .5rem
+                    transition: .5s
+                    user-select: none
+                    cursor: pointer
+                    &:hover
+                        background: $blueLightTransparent
             &__link
-                color: $black
-                grid-area: 4 / 2 / 5 / 3
+                color: $white
+                grid-area: 2 / 2 / 4 / 3
                 justify-self: flex-end
+                align-self: flex-end
                 text-decoration: none
                 margin-right: 5%
+                margin-bottom: 5%
+                padding: 5%
+                background: $blackTransparent
+                text-transform: uppercase
+                border-radius: 5px
+                font-size: .6em
+                z-index: 3
+                transition: .5s
+                &:hover
+                    background: $blueLight
 //////////fin main
 //////aside
 .aside
