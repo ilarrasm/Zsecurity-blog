@@ -105,7 +105,7 @@
     &__ul
         display: flex
         justify-content: space-around
-        padding: 2rem
+        padding: 2rem 0
         align-items: center
         &__li
             list-style: none
@@ -121,13 +121,16 @@
                 border-radius: 10px
                 font-weight: 600
                 letter-spacing: .3rem
-                border-left: solid 1px $white
+                border-left: solid 5px $blueLight
+                transition: .1s
                 &:hover
+                    color: $white
                     border-left: solid 5px $blueLight
+                    background: $blueLightTransparent
 //////////////////////// carru
 .carrousel
     display: flex
-    height: 62vh
+    height: 100%
     margin: 1rem
     &__arrowLeft
     &__arrowRight
@@ -172,6 +175,9 @@
                 border-radius: 5px
                 text-decoration: none
                 text-transform: uppercase
+                &:hover
+                    background: $blueLightTransparent
+                    color: $white
 //////////FIN HEAD
 /////////Main
 .main
@@ -200,6 +206,13 @@
             border-top: solid 5px $blue
             border-radius: 10px
             overflow: hidden
+            transition: 1s
+            background: $blue
+            &:hover
+                transform: scale(1.1)
+                border-top: solid 5px $blueLight
+            &:hover > &__H3
+                background: $blue
             &__H3
                 grid-area: 2 / 1 / 4 / 3
                 font-size: 1.7rem
@@ -211,6 +224,7 @@
                 text-align: justify-all
                 text-transform: uppercase
                 z-index: 1
+                transition: .5s
             &__img
                 grid-area: 1 / 1 / 4 / 3
                 height: 100%
@@ -274,23 +288,62 @@
             grid-template-columns: 50% 1fr
             grid-template-rows: 1fr 5%
             margin: 1rem 15% 1rem 0
+            height: 45vh
+            position: relative
+            &:hover > &__container
+                height: 100%
+            &:hover > &__img
+                filter: blur(20px)
             &__img
-                grid-area: 1 / 3 / 3 / 2
-                width: 200px
-            &__H4
-                grid-area: 1 / 1 / 2 / 3
-                color: $black
-                font-size: 1.6rem
-                font-weight: 300
-                text-transform: uppercase
-                align-self: flex-start
+                grid-area: 1 / 1 / 3 / 3
+                height: 100%
+                width: 100%
+                object-fit: cover
+                transition: .6s .2s
+            &__container
+                grid-area: 1 / 1 / 3 / 3
+                display: flex
+                flex-wrap: wrap
                 z-index: 1
-                width: 70%
-            &__link
-                grid-area: 2 / 2 / 3 / 3
-                color: $white
-                padding: .5rem
-                text-decoration: none
-                justify-self: flex-end
-                text-align: center
-                background: $blue
+                background: $blackTransparent1
+                overflow: hidden
+                height: 21%
+                position: absolute
+                bottom: 0%
+                transition: height .6s .2s
+                &__H4
+                    color: $white
+                    font-size: 1.3rem
+                    font-weight: 500
+                    text-transform: uppercase
+                    z-index: 1
+                    margin: 5%
+                    background: $blackTransparent1
+                    padding: 1rem
+                    text-align: center
+                    align-self: center
+                    border-left: solid 3px $blueLight
+                &__p
+                    color: $white
+                    font-size: 1rem
+                    margin: 5%
+                    padding: 5%
+                    background: $blackTransparent1
+                    border-radius: 20px
+                    border-bottom: solid 3px $blueLight
+                &__link
+                    display: flex
+                    color: $white
+                    padding: .5rem
+                    margin: 1rem
+                    text-decoration: none
+                    align-self: flex-end
+                    justify-content: flex-end
+                    text-align: center
+                    background: $blackTransparent1
+                    border-radius: 10px
+                    position: relative
+                    left: 55%
+                    transition: .3s
+                    &:hover
+                        background: $blueLightTransparent
