@@ -30,7 +30,10 @@ body {
 .header {
   grid-area: 1 / 1 / 2 / 4;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background: url(../media/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .header .logo {
     display: flex;
     width: 90%;
