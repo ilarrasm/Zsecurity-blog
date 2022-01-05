@@ -8,30 +8,28 @@
     grid-area: 1 / 1 / 2 / 4
     display: flex
     flex-direction: column
-    background: url(../media/background.jpg)
-    background-repeat: no-repeat
-    background-size: cover
     .logo
         display: flex
-        width: 90%
+        width: 100%
         align-items: center
         position: relative
         &__zod
             color: $black
-            font-size: 5em
-            margin-left: .5rem
+            border-radius: 60px 20px 60px 20px
+            font-size: 2em
+            margin: 2rem
             letter-spacing: 1rem
-            font-weight: 100
+            font-weight: 900
             font-style: italic
             padding: 1rem
             z-index: 1
             user-select: none
         &__sub
-            color: $blue
+            color: $blueLight
             position: absolute
-            top: 89%
-            left: 8%
-            width: 100%
+            top: 60%
+            left: 10%
+            width: 50%
             padding: .3rem
             letter-spacing: .2rem
             word-spacing: .3rem
@@ -53,7 +51,7 @@
     align-items: center
     justify-self: center
     justify-content: space-around
-    background: $black
+    background: $white
 .user
     display: flex
     align-items: center
@@ -63,7 +61,7 @@
     .fa-user, &__a
         margin: .4rem
         font-size: 1rem
-        color: $white
+        color: $black
     &__a
         text-decoration: none
 .search
@@ -102,45 +100,16 @@
     .fa-user
     &__a
 ////////////           
-.navbar
-    padding: 1rem
-    margin: 1rem
-    &__ul
-        display: flex
-        justify-content: space-around
-        padding: 2rem 0
-        align-items: center
-        &__li
-            list-style: none
-            align-items: center
-            justify-content: center
-            &__a
-                font-size: .7em
-                text-decoration: none
-                color: $black
-                text-transform: uppercase
-                padding: 1rem 2rem
-                transition: border-left .3s
-                border-radius: 10px
-                font-weight: 600
-                letter-spacing: .3rem
-                border-left: solid 5px $blueLight
-                transition: .1s
-                &:hover
-                    color: $white
-                    border-left: solid 5px $blueLight
-                    background: $blueLightTransparent
 //////////////////////// carru
 .carrousel
     display: flex
     height: 30vmax
-    margin: 1rem 0
     position: relative
     &__arrowLeft, &__arrowRight
         position: absolute
         top: 40%
         background: $white
-        padding: 1rem
+        padding: 0 1rem
         color: $black
         border-radius: 12px
         margin: 0 1rem
@@ -220,13 +189,16 @@
     &__H2
         font-size: 3rem
         align-self: center
-        margin-bottom: 1rem
+        margin: 5rem 0
+        padding: .3rem 1rem
+        border-left: solid 10px $blueLight
         text-transform: uppercase
         color: $black
     &__article
         display: flex
         flex-direction: column
         justify-content: space-around
+        align-items: center
         &__post
             display: grid
             grid-template-columns: 1fr 1fr
@@ -239,6 +211,7 @@
             overflow: hidden
             transition: 1s
             background: $blue
+            box-shadow: 5px 9px 15px gray
             &:hover
                 transform: scale(1.1)
                 border-top: solid 5px $blueLight
@@ -312,17 +285,31 @@
 .aside
     grid-area: 2 / 3 / 3 / 4
     &__article
+        display: flex
+        flex-direction: column
+        align-items: center
         &__H3
+            align-self: center
             font-size: 1.6rem
             text-transform: uppercase
             font-weight: 500
+            margin: 5rem 0
+            margin-right: 15%
+            padding: 1rem
+            text-align: center
+            border-radius: 6px
+            color: $black
+            border-left: solid 3px $blueLight
         &__post
             display: grid
             grid-template-columns: 50% 1fr
             grid-template-rows: 1fr 5%
-            margin: 1rem 15% 1rem 0
+            margin: 1rem 15% 3rem 5%
             height: 45vh
             position: relative
+            border-radius: 10%
+            overflow: hidden
+            box-shadow: 5px 9px 5px gray
             &:hover > &__container
                 height: 100%
             &:hover > &__img
@@ -351,7 +338,8 @@
                     text-transform: uppercase
                     z-index: 1
                     margin: 5%
-                    background: $blackTransparent1
+                    background: $blueLight
+                    border-radius: 20px
                     padding: 1rem
                     text-align: center
                     align-self: center
