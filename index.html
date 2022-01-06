@@ -16,21 +16,49 @@
                 <span class="logo__sub">Tu blog sobre cryptocurrency</span>
                 <!-- <img src="media/logo.svg" alt="Logo de Zod Security" class="logo__img"> -->
             </picture>
-            <ul class="top__ul">
-                <li class="top__ul__li"><a href="" class="top__ul__li__a"></a></li>
-                <li class="top__ul__li"><a href="" class="top__ul__li__a"></a></li>
-                <li class="top__ul__li"><a href="" class="top__ul__li__a"></a></li>
-            </ul>
-            <span class="user">
-                <i class="fas fa-user"></i>
-                <a href="" class="user__a">Ingresar/Registrarse</a>
-            </span>
+            <!--<button onclick="hamburguesa()">aaaaaaaaaa </button> -->
+                <ul class="nav">
+                    <li class="nav_li">
+                        <a class="nav__li__a" href="#">news</a>
+                    </li>
+                    <li class="nav_li"> 
+                        <div class="dropdown nav__li__a">
+                            <button class="dropbtn">
+                                Categorias
+                            </button>
+                            <div class="dropdown-content">
+                            <div class="header">
+                                <h2>Categorias</h2>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                <h3>Ultimas noticias</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            <div class="column">
+                                <h3>Bitcoin</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            <div class="column">
+                                <h3>Ethereum</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                      </div>
+                    </li>
+                    <li class=""><a href=""><span class="user"><i class="fas fa-user"></i></span></a></li>
+                </ul>
         </nav>
         <article class="carrousel">
             <span class="carrousel__arrowLeft"><i class="fas fa-chevron-left"></i></span>
             
             <section class="carrousel__container">
-                <img src="media/amd.jpg" alt="" class="carrousel__container__img">
+                <img src="media/pruebapic.jpg" alt="" class="carrousel__container__img">
                 <div class="carrousel__container__post">
                     <h1 class="H1">AMD SUPERA A SU COMPETIDOR</h1>
                     <p class="carrousel__container__post__p">
@@ -58,95 +86,84 @@
         </article>
     </header>
     <main class="main">
-        <h2 class="main__H2">Entradas recientes</h2>
         <article class="main__article">
+            <div class="main__post">
+                <img src="media/amd.jpg" alt="" class="main__post__img">
+                <div class="main__post__container">
+                    <h2 class="main__post__container__H2">AMD supera a Nvidia en cryptoMaining</h2>
+                    <div class="main__post__container__date">
+                        <span class="main__post__container__date__fecha">20 de dic. 2021</span>
+                        <span class="main__post__container__date__cat">Mineria</span>
+                    </div>
+                    <p class="main__post__container__p">
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. assumenda hic numquam itaque deserunt voluptas, 
+                        similique nobis accusamus aliquam 
+                        consectetur quae debitis, dolorem ipsa esse laboriosam cum vel, provident magni.
+                    </p>
+                    <a class="main__post__container__link" href="">ir al articulo</a>
+                </div> 
+            </div>
+            <section class="main__article__section-column">
+                <div class="post">
+                    <img src="media/ethereum-banco-central-1536x512.jpg" alt="" class="post__img">
+                    <div class="container">
+                        <h3 class="container__H2">AMD supera a Nvidia en cryptoMaining</h2>
+                        <div class="container__date"><span class="container__date__fecha">20 de dic. 2021</span><span class="container__date__cat">Mineria</span></div>
+                        <a class="container__link" href="">ir al articulo</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="media/elon.webp" alt="" class="post__img">
+                    <div class="container">
+                        <h3 class="container__H2">AMD supera a Nvidia en cryptoMaining</h2>
+                        <div class="container__date"><span class="container__date__fecha">20 de dic. 2021</span><span class="container__date__cat">Mineria</span></div>
+                        <a class="container__link" href="">ir al articulo</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="main__two">
+            <section class="main__two__section">
+                <div class="post-two">
+                    <h3 class="main__article__post__H2">AMD supera a Nvidia en cryptoMaining</h2>
+                <img src="media/amd.jpg" alt="" class="main__article__post__img">
+                <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
+                <a class="main__article__post__link" href="">ir al articulo</a>
+                </div>
+                <div class="post-two">
+                    <h3 class="main__article__post__H2">AMD supera a Nvidia en cryptoMaining</h2>
+                <img src="media/amd.jpg" alt="" class="main__article__post__img">
+                <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
+                <a class="main__article__post__link" href="">ir al articulo</a>
+                </div>
+            </section>
+            <section class="main__two__news">
+                <span>Bitcoin</span>
+                <div class="news"><h4>Bitcoin no para de crecer</h4></div>
+                <div class="news">Bitcoin no para de crecer</div>
+                <div class="news">Bitcoin no para de crecer</div>
+                <div class="news">Bitcoin no para de crecer</div>
+                <div class="news">Bitcoin no para de crecer</div>
+                <div class="news">Bitcoin no para de crecer</div>
+                <div class="news">Bitcoin no para de crecer</div>
+            </section>
+        </article>
+        <span>Bitcoin</span>
+        <article class="main__three">
             <section class="main__article__post">
-                <h3 class="main__article__post__H3">AMD supera a Nvidia en cryptoMaining</h2>
+                <h3 class="main__article__post__H2">AMD supera a Nvidia en cryptoMaining</h2>
                 <img src="media/amd.jpg" alt="" class="main__article__post__img">
                 <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
                 <a class="main__article__post__link" href="">ir al articulo</a>
             </section>
-            <section class="main__article__post">
-                <h3 class="main__article__post__H3">AMD supera a Nvidia en cryptoMaining</h2>
-                <img src="media/ethereum-banco-central-1536x512.jpg" alt="" class="main__article__post__img">
-                <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
-                <a class="main__article__post__link" href="">ir al articulo</a>
-            </section>
-            <section class="main__article__post">
-                <h3 class="main__article__post__H3">AMD supera a Nvidia en cryptoMaining</h2>
-                <img src="media/bitecaru.webp" alt="" class="main__article__post__img">
-                <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
-                <a class="main__article__post__link" href="">ir al articulo</a>
-            </section>
-            <section class="main__article__post">
-                <h3 class="main__article__post__H3">AMD supera a Nvidia en cryptoMaining</h2>
-                <img src="media/elon.webp" alt="" class="main__article__post__img">
-                <div class="main__article__post__date"><span class="main__article__post__date__fecha">20 de dic. 2021</span><span class="main__article__post__date__cat">Mineria</span></div>
-                <a class="main__article__post__link" href="">ir al articulo</a>
-            </section>
         </article>
-        <ul>
+        <ul class="navigator">
             <li><span>anterior</span></li>
             <li><span>3</span></li>
             <li><span>posterior</span></li>
         </ul>
     </main>
-    <aside class="aside">
-        <article class="aside__article">
-            <h3 class="aside__article__H3">Entradas Destacadas</h3>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/productos/datacenter-server-room-interior-vector.webp" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/elon.webp" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/ethereum-banco-central-1536x512.jpg" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-        </article>
-        <article class="aside__article">
-            <h3 class="aside__article__H3">Entradas Destacadas</h3>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/productos/datacenter-server-room-interior-vector.webp" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/elon.webp" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/ethereum-banco-central-1536x512.jpg" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-        </article>
-    </aside>
     <footer class="footer">
         <h2>Tambien te puede interesar</h2>
         <article class="container-row">
@@ -158,24 +175,9 @@
                     <a href="" class="aside__article__post__container__link">ir al articulo</a>
                 </div>
             </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/ethereum-banco-central-1536x512.jpg" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
-            <section class="aside__article__post">
-                <img class="aside__article__post__img" src="media/ethereum-banco-central-1536x512.jpg" alt="">
-                <div class="aside__article__post__container">
-                    <h4 class="aside__article__post__container__H4">La nueva placa Nvidia</h4>
-                    <p class="aside__article__post__container__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, iure voluptates saepe reiciendis laudantium ex labore necessitatibus officiis magni sit, numquam recusandae dolorem molestiae, illum illo quia error deleniti? Veniam?</p>
-                    <a href="" class="aside__article__post__container__link">ir al articulo</a>
-                </div>
-            </section>
         </article>
     </footer>
+    <script src="script/app.js"></script>
 </body>
 
 </html>

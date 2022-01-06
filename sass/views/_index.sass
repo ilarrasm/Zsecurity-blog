@@ -1,11 +1,5 @@
-.bodyIndex
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 100% 1fr 1fr
-    background: $white
 /////////////
 .header
-    grid-area: 1 / 1 / 2 / 4
     display: flex
     flex-direction: column
     .logo
@@ -39,7 +33,6 @@
             text-transform: uppercase
             border-radius: 10px
             z-index: 1
-            box-shadow: 5px 3px 2px $blackTransparent1
             user-select: none
             text-align: right
             padding-top: 1%
@@ -49,9 +42,25 @@
     grid-area: 1 / 1 / 2 / 13
     display: flex
     align-items: center
-    justify-self: center
     justify-content: space-around
     background: $white
+    position: sticky
+    top: 0
+    width: 100%
+    z-index: 100
+    box-shadow: 1px 1px 5px gray
+.nav
+    display: flex
+    list-style: none
+    align-items: center
+    margin-right: 5%
+    &__li
+        &__a
+            color: $black
+            text-decoration: none
+            padding: 1rem
+            margin: 2rem
+
 .user
     display: flex
     align-items: center
@@ -64,31 +73,6 @@
         color: $black
     &__a
         text-decoration: none
-.search
-    display: flex
-    flex-direction: row-reverse
-    align-self: center
-    transition: 2s
-    margin: 2%
-    border: solid 1px $white
-    border-radius: 5px
-    width: 30%
-    height: 33%
-    overflow: hidden
-    &:hover
-        border: solid 1px $blue
-    &__input
-        font-size: .7rem
-        webkit-transition: 0.5s
-        outline: none
-        border: none
-        transition: box-shadow .5s ease-out
-        padding: .7rem
-        width: 100%
-        &:focus
-            color: $black
-    &__search
-        display: flex
 .fa-search
     font-size: .7rem
     color: #ccc
@@ -99,6 +83,61 @@
     align-items: center
     .fa-user
     &__a
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn 
+  background-color: $black
+  color: $white
+
+/* Dropdown content (hidden by default) */
+.dropdown-content 
+  display: none
+  position: absolute
+  background-color: $white
+  width: 100%
+  left: 0
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 10
+/* Mega Menu header, if needed */
+.dropdown-content .header 
+  background: $black
+  padding: 16px
+  color: $white
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content 
+  display: block
+/* Create three equal columns that floats next to each other */
+.column 
+  float: left
+  width: 33.33%
+  padding: 10px
+  height: 250px
+.dropdown 
+  float: left
+  overflow: hidden
+/* Dropdown button */
+.dropdown .dropbtn 
+  font-size: 1rem
+  border: none
+  outline: none
+  color: $black
+  background: none
+  padding: 1rem
+
+/* Style links inside the columns */
+.column a 
+  float: none
+  color: $black
+  padding: 16px
+  text-decoration: none
+  display: block
+  text-align: left
+
+/* Add a background color on hover */
+.column a:hover 
+  background-color: $white
+
+
+/* Clear floats after the columns */
 ////////////           
 //////////////////////// carru
 .carrousel
@@ -109,7 +148,7 @@
         position: absolute
         top: 40%
         background: $white
-        padding: 0 1rem
+        padding: 1rem 1rem
         color: $black
         border-radius: 12px
         margin: 0 1rem
@@ -181,198 +220,78 @@
 //////////FIN HEAD
 /////////Main
 .main
-    grid-area: 2 / 1 / 3 / 3
     display: flex
     flex-direction: column
     height: 100%
-    padding: 0 5%
-    &__H2
-        font-size: 3rem
-        align-self: center
-        margin: 5rem 0
-        padding: .3rem 1rem
-        border-left: solid 10px $blueLight
-        text-transform: uppercase
-        color: $black
-    &__article
+    &__post
         display: flex
-        flex-direction: column
-        justify-content: space-around
-        align-items: center
-        &__post
-            display: grid
-            grid-template-columns: 1fr 1fr
-            grid-template-rows: 1fr 1fr 5%
-            margin: 1rem
-            height: 30vh
-            width: 90%
-            border-top: solid 5px $blue
-            border-radius: 10px
-            overflow: hidden
-            transition: 1s
-            background: $blue
-            box-shadow: 5px 9px 15px gray
-            &:hover
-                transform: scale(1.1)
-                border-top: solid 5px $blueLight
-            &:hover > &__img
-                filter: blur(20px)
-            &:hover > &__H3
-                background: $blackTransparent1
-            &__H3
-                grid-area: 2 / 1 / 4 / 3
-                font-size: 1.7rem
-                padding: 1rem
-                color: $white
-                background: $blueLightTransparent
-                word-spacing: .5rem
-                letter-spacing: .2rem
-                text-align: justify-all
+        flex-direction: row
+        width: 90%
+        &__img
+            height: 100%
+            width: 300px
+            object-fit: cover
+        &__container
+            margin: 1rem 2.2rem
+            &__H2
+                font-size: 2rem
                 text-transform: uppercase
-                z-index: 1
-                transition: .5s
-            &__img
-                grid-area: 1 / 1 / 4 / 3
-                height: 100%
-                width: 100%
-                object-fit: cover
+            &__p
+                width: 85%
+                color: $black
             &__date
-                grid-area: 1 / 2 / 2 / 3
+            &__link
                 display: flex
                 justify-content: flex-end
-                align-self: flex-start
-                margin: 1rem
-                z-index: 2
-                &__fecha
-                    color: $white
-                    padding: 1rem
-                    border-radius: 5px
-                    margin-right: 5%
-                    font-size: .5rem
-                    border-left: solid 3px $blueLight
-                    background: $black
-                &__cat
-                    color: $white
-                    border-left: solid 3px $blueLight
-                    background: $black
-                    padding: 1rem
-                    border-radius: 5px
-                    font-size: .5rem
-                    transition: .5s
-                    user-select: none
-                    cursor: pointer
-                    &:hover
-                        background: $blueLightTransparent
-            &__link
-                color: $white
-                grid-area: 2 / 2 / 4 / 3
-                justify-self: flex-end
-                align-self: flex-end
-                text-decoration: none
-                margin-right: 5%
-                margin-bottom: 5%
-                padding: 5%
-                background: $blackTransparent
-                text-transform: uppercase
-                border-radius: 5px
-                font-size: .6em
-                z-index: 3
-                transition: .5s
-                &:hover
-                    background: $blueLight
-//////////fin main
-//////aside
-.aside
-    grid-area: 2 / 3 / 3 / 4
     &__article
         display: flex
-        flex-direction: column
-        align-items: center
-        &__H3
-            align-self: center
-            font-size: 1.6rem
-            text-transform: uppercase
-            font-weight: 500
-            margin: 5rem 0
-            margin-right: 15%
-            padding: 1rem
-            text-align: center
-            border-radius: 6px
-            color: $black
-            border-left: solid 3px $blueLight
-        &__post
-            display: grid
-            grid-template-columns: 50% 1fr
-            grid-template-rows: 1fr 5%
-            margin: 1rem 15% 3rem 5%
-            height: 45vh
-            position: relative
-            border-radius: 10%
-            overflow: hidden
-            box-shadow: 5px 9px 5px gray
-            &:hover > &__container
-                height: 100%
-            &:hover > &__img
-                filter: blur(20px)
-            &__img
-                grid-area: 1 / 1 / 3 / 3
-                height: 100%
-                width: 100%
-                object-fit: cover
-                transition: .6s .2s
-            &__container
-                grid-area: 1 / 1 / 3 / 3
-                display: flex
-                flex-wrap: wrap
-                z-index: 1
-                background: $blackTransparent1
-                overflow: hidden
-                height: 21%
-                position: absolute
-                bottom: 0%
-                transition: height .6s .2s
-                &__H4
-                    color: $white
-                    font-size: 1.3rem
-                    font-weight: 500
-                    text-transform: uppercase
-                    z-index: 1
-                    margin: 5%
-                    background: $blueLight
-                    border-radius: 20px
-                    padding: 1rem
-                    text-align: center
-                    align-self: center
-                    border-left: solid 3px $blueLight
-                &__p
-                    color: $white
-                    font-size: 1rem
-                    margin: 5%
-                    padding: 5%
-                    background: $blackTransparent1
-                    border-radius: 20px
-                    border-bottom: solid 3px $blueLight
-                &__link
-                    display: flex
-                    color: $white
-                    padding: .5rem
-                    margin: 1rem
-                    text-decoration: none
-                    align-self: flex-end
-                    justify-content: flex-end
-                    text-align: center
-                    background: $blackTransparent1
-                    border-radius: 10px
-                    position: relative
-                    left: 55%
-                    transition: .3s
-                    &:hover
-                        background: $blueLightTransparent
+        margin: 1rem
+        &__section-column
+            display: flex
+            flex-direction: column
+    &__two
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        &__section
+            display: flex
+            flex-direction: row
+        img
+            height: 50px
+    &__three 
+        display: flex
+        img
+            height: 100px
+.container
+    display: flex
+    flex-direction: column
+    img
+        height: 5vh
+        width: 100%
+        object-fit: contain       
 
 .footer
-    grid-area: 3 / 1 / 4 / 4
     display: flex
     flex-direction: column    
 .container-row
     display: flex
     flex-direction: row
+.navigator
+    display: flex
+    padding: 1rem
+    align-self: center
+    li
+        margin: 1rem
+        list-style: none
+.post
+    display: flex
+    flex-direction: row
+    margin: 1rem
+    &__img
+        height: 100px
+        width: 100px
+        object-fit: cover
+.post-two
+    display: flex
+    flex-direction: column
+    margin: 1rem
