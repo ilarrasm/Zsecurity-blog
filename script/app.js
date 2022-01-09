@@ -3,11 +3,10 @@ function hamburguesa() {
   element.classList.toggle("menuRes");
 } 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.width = "22%";
 }
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
 }
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;

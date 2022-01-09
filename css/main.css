@@ -125,14 +125,15 @@ h2, h3, h3, h5, h6 {
     margin: .3rem 1rem;
     align-items: center;
     padding: 1rem;
-    text-align: center; }
+    width: 100%; }
   .table-head {
     grid-row: 1 / 2;
     background: #181717;
     color: whitesmoke;
     text-transform: uppercase; }
   .table-body {
-    color: #181717; }
+    color: #181717;
+    text-align: justify-all; }
 
 .col-1 {
   grid-column: 1 / calc(1 + 1); }
@@ -160,27 +161,33 @@ h2, h3, h3, h5, h6 {
   display: flex;
   flex-direction: column; }
 
-.dash-nav__list {
+.dash-nav {
   display: flex;
-  flex-direction: column;
-  list-style: none; }
-  .dash-nav__list__item {
-    padding: 1rem 0; }
-    .dash-nav__list__item:hover {
-      background: #366BE7; }
-    .dash-nav__list__item__a {
-      text-transform: uppercase;
-      font-size: 1rem;
-      width: 100%;
-      margin-left: 3%;
-      cursor: pointer; }
+  flex-direction: column; }
+  .dash-nav__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.usernav {
+  color: whitesmoke;
+  margin-left: 3%; }
+
+.a-dash {
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  user-select: none; }
+  .a-dash:hover {
+    background: #366BE7; }
 
 .aside-dash {
   height: 100%;
   width: 0;
   position: absolute;
-  z-index: 1;
-  top: 5%;
+  z-index: 33;
+  top: 0;
   left: 0;
   background-color: #181717;
   overflow-x: hidden;
@@ -194,12 +201,7 @@ h2, h3, h3, h5, h6 {
 .closebtn {
   display: flex;
   color: whitesmoke;
-  padding: 1rem;
-  justify-content: flex-end;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 10%;
-  right: 4%; }
+  justify-content: flex-end; }
 
 .dropdown-container {
   display: none;
@@ -233,14 +235,15 @@ h2, h3, h3, h5, h6 {
 
 .fa-arrow-circle-left {
   color: whitesmoke;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 1.5rem; }
   .fa-arrow-circle-left:hover {
     color: #366BE7; }
 
-.fa-edit {
-  color: #181717;
+.fa-bars {
+  color: whitesmoke;
   cursor: pointer; }
-  .fa-edit:hover {
+  .fa-bars:hover {
     color: #366BE7; }
 
 .dropdown-user {
@@ -250,14 +253,22 @@ h2, h3, h3, h5, h6 {
   top: 90%;
   right: 1%;
   background: #181717;
-  padding: 1rem;
+  padding: 0 2rem;
   border-radius: 4px; }
   .dropdown-user__a {
     color: whitesmoke;
     text-decoration: none;
-    margin: 1rem; }
+    margin: 1rem;
+    padding: .1rem .3rem;
+    border-bottom: solid 1px gray; }
     .dropdown-user__a:hover {
       color: #366BE7; }
+
+.subDrop {
+  margin: 1rem;
+  padding: .3rem; }
+  .subDrop:hover {
+    background: #366BE7; }
 
 .show {
   display: flex; }
