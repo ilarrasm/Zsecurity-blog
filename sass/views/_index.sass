@@ -222,6 +222,7 @@
 .index-main
     display: flex
     flex-direction: column
+    margin: 5%
 .row
     display: flex
     flex-direction: row
@@ -239,7 +240,7 @@
     &__date
         align-self: flex-end
         &__fecha, &__categoria
-            color: $blueLight
+            color: $blue
             margin: .1rem 1rem          
     &__pic
         margin: 1rem
@@ -249,16 +250,28 @@
             object-fit: cover
     &__p
         margin: 1.3rem
+        color: $black
     &__link
         align-self: flex-end
         color: $blue
         text-decoration: none
-        margin: 1rem
+        margin: 0 1rem
 .ultimasNoticias
     margin: 1rem
+    margin-top: 3%
 .lista
     margin: .1rem
     &__items
         font-size: .9em
         margin: 1.5rem
         list-style: none
+.column
+    display: flex
+    flex-direction: column
+    width: 100%
+    justify-content: space-between
+.categoria
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin: 1rem

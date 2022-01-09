@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>DashBoard</title>
+</head>
+<body>
+    <header class="dashboard-header">
+        <span class="logo-dash">Zod Security</span>
+        <picture onclick="userDrop()" class="user-pic dropdown-btn">
+            <img src="../media/elon.webp" alt="">
+        </picture>
+        <div id="userDate" class="dropdown-user">
+            <a  class="dropdown-user__a" href="#">configuar cuenta</a>
+            <a  class="dropdown-user__a" href="#">soporte</a>
+            <a  class="dropdown-user__a" href="#">cerrar sesión</a>
+        </div>
+    </header>
+    <main id="main">
+        <span class="openbtn" onclick="openNav()"><i class="fas fa-edit"></i></span>
+        <article class="row-dash first">
+            <section class="column-dash perfil">
+                <picture class="img-user"><img src="../media/elon.webp" alt=""></picture>
+                <span class="userName">Hola Elon</span>
+                <a class="editPerfil">Editar perfil</a>
+            </section>
+            <section class="column-dash service-dash">
+                <a href="" class="verificate">Cuenta verificada</a>
+                <div class="service-status">
+                    <span class="tittle-serv">Estado de servicio</span>
+                    <div class="status-item">
+                        <span>status</span>
+                        <div>
+                            <span class="lineStatus">offline</span>
+                            <span class="lightStatus">*</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <span>Temperatura</span>
+                        <div>
+                            <span class="lineStatus">offline</span>
+                            <span class="lightStatus">*</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="column-dash">
+            <h2 class="tituloDash">Consultas</h2>
+            <section class="table">
+               <span class="table-head col-1">asunto</span>
+               <span class="table-head col-2">tipo de consulta</span>
+               <span class="table-head col-3">fecha</span>
+               <span class="table-head col-4">id</span>
+               <span class="table-head col-5">Status</span>
+               <span class="table-body col-1">Sobrecalienta mi placa video</span>
+               <span class="table-body col-2">soporte</span>
+               <span class="table-body col-3">5/1/2022</span>
+               <span class="table-body col-4">1f1f1f</span>
+               <span class="table-body col-5">pediente</span>
+            </section>
+        </article>
+    </main>
+    <aside  id="mySidenav" class="aside-dash">
+        <nav class="dash-nav">
+            <ul class="dash-nav__list">
+                <li><span onclick="closeNav()" class="closebtn white"><i class="fas fa-arrow-circle-left"></i></span></li>
+                <li class="dash-nav__list__item actives"><span class="dash-nav__list__item__a a-dash white">Dashboard</span></li>
+                <li class="dash-nav__list__item"><span class="dash-nav__list__item__a a-dash dropdown-btn white">Presupuesto</span>
+                    <div class="dropdown-container">
+                        <a href="#">Placas de video</a>
+                        <a href="#">rigs</a>
+                        <a href="#">Housing</a>
+                    </div>
+                </li>
+                <li class="dash-nav__list__item"><span class="dash-nav__list__item__a a-dash white">Soporte</span></li>
+            </ul>
+        </nav>
+    </section>
+    <script src="../script/app.js"></script>
+</body>
+</html>
