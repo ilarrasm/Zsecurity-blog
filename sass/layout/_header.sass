@@ -1,0 +1,82 @@
+/////////////Logo
+.header
+    display: flex
+    flex-direction: column
+    .logo
+        display: flex
+        width: 100%
+        align-items: center
+        position: relative
+        &__zod
+            color: $black
+            border-radius: 60px 20px 60px 20px
+            font-size: 2em
+            margin: 2rem
+            letter-spacing: 1rem
+            font-weight: 900
+            font-style: italic
+            padding: 1rem
+            z-index: 1
+            user-select: none
+        &__sub
+            color: $blueLight
+            position: absolute
+            top: 60%
+            left: 10%
+            width: 50%
+            padding: .3rem
+            letter-spacing: .2rem
+            word-spacing: .3rem
+            font-size: .9rem
+            font-style: italic
+            font-weight: 500
+            text-transform: uppercase
+            border-radius: 10px
+            z-index: 1
+            user-select: none
+            text-align: right
+            padding-top: 1%
+            padding-right: 3%
+//////////////navbar
+.top
+    grid-area: 1 / 1 / 2 / 13
+    display: flex
+    align-items: center
+    justify-content: space-around
+    background: $white
+    position: sticky
+    top: 0
+    width: 100%
+    z-index: 100
+    box-shadow: 1px 1px 5px gray
+.nav
+    display: flex
+    list-style: none
+    align-items: center
+    margin-right: 5%
+    &__li
+        &__a
+            color: $black
+            text-decoration: none
+            padding: 1rem
+            margin: 2rem
+            text-transform: uppercase
+.user
+    display: flex
+    align-items: center
+    align-self: center
+    justify-self: flex-end
+    margin: 2%
+    .fa-user, &__a
+        margin: .4rem
+        font-size: 1rem
+        color: $black
+    &__a
+        text-decoration: none
+.fa-search
+    font-size: .7rem
+    color: #ccc
+    background: $black
+    padding: 1rem
+    align-self: center
+////////////fin de navbar

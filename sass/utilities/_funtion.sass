@@ -1,0 +1,43 @@
+/////1-2, 2-3... 12-13
+@for $i from 1 through 12
+    .col-#{$i}-#{$i + 1} 
+        grid-column: #{$i} / #{$i + 1}
+@for $i from 1 through 12
+    .row-#{$i}-#{$i + 1} 
+        grid-column: #{$i} / #{$i + 1}
+//////// 1-3 , 2-4.... 11-13
+@for $i from 1 through 11
+    .col-#{$i}-#{$i + 2}
+        grid-column: #{$i} / #{$i + 2}
+@for $i from 1 through 11
+    .row-#{$i}-#{$i + 2}
+        grid-row: #{$i} / #{$i + 2}
+//////// 1-4 , 2-5.... 10-13
+@for $i from 1 through 10
+    .col-#{$i}-#{$i + 3}
+        grid-column: #{$i} / #{$i + 3}
+@for $i from 1 through 10
+    .row#{$i}-#{$i + 3}
+        grid-row: #{$i} / #{$i + 3}
+//////// 1-5 , 2-6.... 9-13
+@for $i from 1 through 9
+    .col-#{$i}-#{$i + 4}
+        grid-column: #{$i} / #{$i + 4}
+    .row-#{$i}-#{$i + 4}
+        grid-row: #{$i} / #{$i + 4}
+//////// 1-6 , 2-7.... 8-13
+@for $i from 1 through 8
+    .col-#{$i}-#{$i + 5}
+        grid-column: #{$i} / #{$i + 5}
+    .row-#{$i}-#{$i + 5}
+        grid-row: #{$i} / #{$i + 5}
+/////////1-7 , 2-8 .. 7-13
+@for $i from 1 through 7
+    .col-#{$i}-#{$i + 5}
+        grid-column: #{$i} / #{$i + 5}
+    .row-#{$i}-#{$i + 5}
+        grid-row: #{$i} / #{$i + 5}
+.col-1-13
+    grid-column: 1 / 13
+.col-1-9
+    grid-column: 1 / 9
