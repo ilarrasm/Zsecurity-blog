@@ -11,22 +11,11 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
 }
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "flex") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "flex";
-  }
-  });
-}
 function userDrop() {
   document.getElementById("userDate").classList.toggle("show");
+}
+function userDropCat(){
+  document.getElementById("categorias").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
