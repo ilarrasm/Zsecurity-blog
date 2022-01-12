@@ -1,4 +1,47 @@
 .footer
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
     background: $black
     width: 100%
     height: 100%
+    align-items: flex-start
+    justify-content: space-between
+    &__contain
+        display: flex 
+        ul
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            list-style: none
+            margin: 1rem
+            li
+                margin: .5rem 1rem
+                color: $white
+    &__h3
+        display: flex
+        font-size: .7em
+        align-self: flex-start
+        background: $white
+        color: $black
+        padding: .5rem 1.5rem
+        border-radius: 5px
+        text-transform: uppercase
+    &__redesSociales
+        display: flex
+        ul
+            display: flex
+            flex-direction: row
+            list-style: none
+            margin: 2rem
+            justify-content: space-between
+            li
+                margin: .5rem 1rem
+                color: $white
+.fab
+    font-size: 4rem
+    cursor: pointer
+    &:hover
+        color: $blue
+.w-100
+    width: 100%

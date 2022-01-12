@@ -31,3 +31,41 @@ window.onclick = function(event) {
     }
   }
 }
+/////////////carrusel
+const carouselSlide = document.querySelector('.carrousel');
+const carouselImages = document.querySelectorAll('.carrousel__container');
+///bbuttons
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+//counter
+let counter = 1;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+//bButtons listener
+nextBtn.addEventListener('click', () => {
+  if (counter >= carouselImages.length -1) return;
+  carouselSlide.style.transition ="transform 0.4s ease-in-out";
+  counter++;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+prevBtn.addEventListener('click', () => {
+  if (counter <= 0) return;
+  carouselSlide.style.transition ="transform 0.4s ease-in-out";
+  counter--;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitionend', () => {
+  if (carouselImages[counter].id === 'lastClone'){
+    carouselSlide.style.transition = "none"
+    counter = carouselImages.lenght - 1;
+    carouselSlide.style.transfrom = 'translateX(' + (-size * counter) + 'px)';
+  }
+  if(carouselImages[counter].id === 'firstClone'){
+    carouselSlide.style.transition = "none"
+    counter = carouselImages.lenght - counter;
+    carouselSlide.style.transfrom = 'translateX(' + (-size * counter) + 'px)';
+  }
+})

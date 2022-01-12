@@ -1,11 +1,15 @@
 //////////////////////// carrusel
+.containerCaru
+    width: 99vmax
+    overflow: hidden
 .carrousel
     display: flex
-    height: 30vmax
+    height: 400px
     position: relative
+    width: 100%
     &__arrowLeft, &__arrowRight
         position: absolute
-        top: 40%
+        top: 30%
         background: $white
         padding: 1rem 1rem
         color: $black
@@ -13,6 +17,7 @@
         margin: 0 1rem
         transition: .6s
         user-select: none
+        border: none
         &:hover
             background: $blueLight
             color: $white
@@ -23,10 +28,11 @@
         left: 0%
         z-index: 3
     &__container
+        display: flex
         position: relative
         &__img
-            height: 100%
-            width: 100%
+            height: 500px
+            width: 100vmax
             object-fit: cover
             transition: .5s
         &__post
