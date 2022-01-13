@@ -1,15 +1,14 @@
 function hamburguesa() {
   var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
+  if (x.style.display === "flex") {
     x.style.display = "none";
   } else {
-    x.style.display = "block";
+    x.style.display = "flex";
   }
 } 
 function openNav() {
   document.getElementById("mySidenav").style.width = "22%";
   document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
-
 }
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";

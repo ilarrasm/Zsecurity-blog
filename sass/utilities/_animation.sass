@@ -1,6 +1,10 @@
 @media only screen and (max-width: 768px)
     .bodyIndex
         grid-template-columns: 1fr
+    .asideIndex
+        display: flex
+        flex-direction: column
+        align-items: center
     [class*='col-']
         grid-column: 1 / 2
     .header
@@ -15,9 +19,7 @@
     .containerCaru
         display: flex
         flex-direction: column
-        max-width: 383px
-        img
-            width: 400
+        max-width: 100vw
     .carrousel__container__post
         grid-template-columns: 1fr
         grid-template-rows: repeat(3, 1fr)
@@ -95,8 +97,23 @@
     .nav
         display: none
     .icon
+        text-decoration: none
     .fa
         color: $black
         font-size: 1.6em
+        z-index: 44
     .containerBlog
         margin: 0
+    #myLinks
+        position: absolute
+        top: 100%
+        left: 0%
+        background: $white
+        width: 100%
+        height: 11vh
+        justify-content: space-between
+        align-items: center
+    .postCorto__h3
+        opacity: 1
+    .postCorto__pic
+        filter: blur(2px)

@@ -43,25 +43,27 @@
             <div class="topnav">
                 <!-- Navigation links (hidden by default) -->
                 <div id="myLinks">
-                  <a href="#news">News</a>
-                  <a href="#contact">
-                      Categorias
-                    </a>
-                  <a href="#about">  
-                        <button onclick="userDrop()" class="nav__li__a btnreset">
-                            <i class="fas fa-user"></i>
-                            <div id="userDate" class="dropdown-user box-shadow">
-                                <a  class="dropdown-user__a" href="#">Sign out</a>
-                                <a  class="dropdown-user__a" href="#">Logín</a>
-                            </div>
+                    <a class="nav__li__a" href="#news">News</a>
+                    <div class="dropdown">
+                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
+                            Categorias
                         </button>
-                    </a>
+                        <div id="categorias"class="dropdown-cat box-shadow">
+                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                        </div>
+                    </div>
+                    <button onclick="userDrop()" class="nav__li__a btnreset">
+                        <i class="fas fa-user"></i>
+                        <div id="userDate" class="dropdown-user box-shadow">
+                            <a  class="dropdown-user__a" href="#">Sign out</a>
+                            <a  class="dropdown-user__a" href="#">Logín</a>
+                        </div>
+                    </button>
                 </div>
                 <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                <a href="javascript:void(0);" class="icon" onclick="hamburguesa()">
-                  <i class="fa fa-bars"></i>
+                <href="javascript:void(0);" class="icon" onclick="hamburguesa()">
+                    <i class="fa fa-bars"></i>
                 </a>
-            </div>
         </nav>
         <!--Carrousel-->
         <div class="containerCaru">
@@ -76,8 +78,8 @@
                         </p>
                         <span class="carrousel__container__post__date">20 de diciembre del 2021</span>
                         <a href="" class="carrousel__container__post__a">Seguir Leyendo</a>
-                    </div> -->
-                </section>
+                    </div> 
+                </section>-->
                 <section class="carrousel__container carousel-card">
                     <img src="media/pruebapic.jpg" alt="" class="carrousel__container__img">
                     <div class="carrousel__container__post">
