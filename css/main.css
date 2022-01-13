@@ -820,6 +820,8 @@ h2, h3, h3, h5, h6 {
   .pagination__sentido {
     color: whitesmoke;
     cursor: pointer; }
+    .pagination__sentido:hover {
+      color: cadetblue; }
   .pagination__n {
     color: #366BE7; }
 
@@ -1112,3 +1114,57 @@ h2, h3, h3, h5, h6 {
     margin-bottom: 5%; }
   .containerBlog__aside {
     margin-bottom: 25%; }
+
+@media only screen and (max-width: 768px) {
+  .bodyIndex {
+    grid-template-columns: 1fr; }
+  [class*='col-'] {
+    grid-column: 1 / 2; }
+  .header .logo__zod {
+    font-size: .9em;
+    margin: 1rem; }
+  .header .logo__sub {
+    font-size: .6em;
+    width: 70%;
+    right: 0%; }
+  .top {
+    flex-direction: column; }
+  .containerCaru {
+    width: 400px; }
+    .containerCaru img {
+      width: 400px; }
+  .carrousel__container__post {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto; }
+  .carrousel__container__post .H1 {
+    font-size: 1rem; }
+  .carrousel__container__post__p {
+    display: none; }
+  .carrousel__container__post__a {
+    grid-column: 1 / 2;
+    width: 100%; }
+  .card {
+    grid-template-columns: 1fr;
+    width: 70%; }
+    .card h2 {
+      font-size: 1rem;
+      opacity: 1;
+      z-index: 3;
+      grid-row: 2 / 3; }
+    .card p {
+      display: none; }
+  .containerBlog__aside {
+    width: 75%; }
+  .categoriasDestacadas {
+    display: flex;
+    flex-wrap: wrap; }
+    .categoriasDestacadas div {
+      width: 43%; }
+  .footer__contain ul {
+    display: flex;
+    flex-direction: column; }
+  .footer__redesSociales {
+    flex-wrap: wrap; }
+  .fab {
+    font-size: 2.2rem; } }
