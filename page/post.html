@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="top">
+            <picture class="logo">
+                <span class="logo__zod">ZOD SECURITY</span>
+                <span class="logo__sub">Tu blog sobre cryptocurrency</span>
+                <!-- <img src="media/logo.svg" alt="Logo de Zod Security" class="logo__img"> -->
+            </picture>
+            <ul class="nav">
+                <li class="nav__li">
+                    <a class="nav__li__a" href="#">news</a>
+                </li>
+                <li class="nav__li"> 
+                    <div class="dropdown">
+                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
+                            Categorias
+                        </button>
+                        <div id="categorias"class="dropdown-cat box-shadow">
+                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                        </div>
+                  </div>
+                </li>
+                <li class="nav__li">
+                    <button onclick="userDrop()" class="nav__li__a btnreset">
+                            <i class="fas fa-user"></i>
+                            <div id="userDate" class="dropdown-user box-shadow">
+                                <a  class="dropdown-user__a" href="#">Sign out</a>
+                                <a  class="dropdown-user__a" href="#">Logín</a>
+                            </div>
+                    </button>
+                </li>
+            </ul>
+            <div class="topnav">
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <a class="nav__li__a" href="#news">News</a>
+                    <div class="dropdown">
+                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
+                            Categorias
+                        </button>
+                        <div id="categorias"class="dropdown-cat box-shadow">
+                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                        </div>
+                    </div>
+                    <button onclick="userDrop()" class="nav__li__a btnreset">
+                        <i class="fas fa-user"></i>
+                        <div id="userDate" class="dropdown-user box-shadow">
+                            <a  class="dropdown-user__a" href="#">Sign out</a>
+                            <a  class="dropdown-user__a" href="#">Logín</a>
+                        </div>
+                    </button>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <href="javascript:void(0);" class="icon" onclick="hamburguesa()">
+                    <i class="fa fa-bars"></i>
+                </a>
+        </nav>
+    </header>
+    <main class="mainPost">
+        <article class="mainPost__head w-100">
+            <h1 class="mainPostH1">Titulo de la entrada</h1>
+            <picture class="imgHead">
+                <img src="../media/amd.jpg" alt="">    
+            </picture>
+        </article>
+        <article class="mainPost__body">
+            <h2 class="postH2">Otro titulo de entrada</h3>
+            <p class="postP">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui accusamus fugit numquam.
+                 A optio porro rem soluta ratione voluptatem ipsa! Iusto nulla earum molestias id optio, sint ducimus 
+                 fugiat?
+            </p>
+        </article>
+        <article class="mainPost__footer">
+            <section class="autor">
+                <picture class="userIMG"><img src="../media/elon.webp" alt=""></picture>
+                <div class="autorContenedor">
+                    <h6>Elon Musk</h6>
+                    <p class="userInfoP">
+                        Lorem ipsum dolor sit amet con
+                        sectetur adipisicing elit. Laudantium magnam in possim
+                        us labore similique unde duci
+                        mus voluptate? Nihil ratione incidunt, maxime 
+                        natus excepturi consequatur, totam recusandae perferendis a earum praesentium!
+    
+                    </p>
+                </div>
+            </section>
+            <section class="flex-column datosFooter">
+                <div class="etiquetas">
+                    <h6>Etiquetas</h6>
+                    <div class="etiquetas__etiquetas">
+                        <span class="tag">amd</span>
+                        <span class="tag">placas de video</span>
+                        <span class="tag">bitcoin</span>
+                        <span class="tag">Radeon</span>
+                        <span class="tag">Radeon xtx</span>
+                    </div>
+                </div>
+                <div class="share">
+                    <h6>Compartir</h6>
+                    <div class="share__share">
+                        <span class="iconRs"><i class="fab fa-linkedin-in"></i></span>
+                        <span class="iconRs"><i class="fab fa-facebook-square"></i></span>
+                        <span class="iconRs"><i class="fab fa-twitter"></i></span>
+                        <span class="iconRs"><i class="fab fa-instagram"></i></span>
+                        <span class="iconRs"><i class="fab fa-twitch"></i></span>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="footerPost">
+        <section class="flex-column">
+            <h5 class="postH5">Categorias</h5>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Bitcoin</h3>
+                <img class="catGrid__img" src="../media/ethereum-banco-central-1536x512.jpg" alt="">
+            </div>
+            <div class="catGrid  box-shadow">
+                <h3 class="catGrid__h3">Ethereum</h3>
+                <img class="catGrid__img" src="../media/nvidiacard.jpg" alt="">
+            </div>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Editorial</h3>
+                <img class="catGrid__img" src="../media/productos/datacenter.png" alt="">
+            </div>
+        </section>
+        <section class="flex-column">
+            <h5 class="postH5">Categorias</h5>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Bitcoin</h3>
+                <img class="catGrid__img" src="../media/ethereum-banco-central-1536x512.jpg" alt="">
+            </div>
+            <div class="catGrid  box-shadow">
+                <h3 class="catGrid__h3">Ethereum</h3>
+                <img class="catGrid__img" src="../media/nvidiacard.jpg" alt="">
+            </div>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Editorial</h3>
+                <img class="catGrid__img" src="../media/productos/datacenter.png" alt="">
+            </div>
+        </section>
+        <section class="flex-column">
+            <h5 class="postH5">Categorias</h5>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Bitcoin</h3>
+                <img class="catGrid__img" src="../media/ethereum-banco-central-1536x512.jpg" alt="">
+            </div>
+            <div class="catGrid  box-shadow">
+                <h3 class="catGrid__h3">Ethereum</h3>
+                <img class="catGrid__img" src="../media/nvidiacard.jpg" alt="">
+            </div>
+            <div class="catGrid box-shadow">
+                <h3 class="catGrid__h3">Editorial</h3>
+                <img class="catGrid__img" src="../media/productos/datacenter.png" alt="">
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
