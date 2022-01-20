@@ -274,3 +274,52 @@
 .formbtn
     align-self: flex-end
     margin: 1rem 0
+/////////////import css-variables from
+.formUserSettings
+    display: flex
+    flex-direction: column
+    align-self: center
+    margin: 10%
+    padding: 1rem
+    box-shadow: 4px 4px 5px $gray
+    width: 40%
+    &__ul
+        list-style: none
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &__li
+            display: flex
+            span
+                margin: 1rem
+.containerBtn
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    margin: 5%
+.editar
+    color: $blue
+    font-size: .6em
+    user-select: none
+    cursor: pointer
+    border-bottom: dashed 1px $blue
+    align-self: center
+    justify-self: center
+.dateUser
+    color: $blackTransparent
+    font-style: italic
+    font-weight: 900
+.passChangeBtn
+    background: $blackTransparent
+    padding: 1rem
+    color: $white
+    border-radius: 10px
+    user-select: none
+    cursor: pointer
+.confirmarBtn
+    background: $blue
+    padding: 1rem
+    color: $white
+    border-radius: 10px
+    user-select: none
+    cursor: pointer

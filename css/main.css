@@ -811,6 +811,60 @@ h2, h3, h3, h5, h6 {
   align-self: flex-end;
   margin: 1rem 0; }
 
+.formUserSettings {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 10%;
+  padding: 1rem;
+  box-shadow: 4px 4px 5px #B8B8B8;
+  width: 40%; }
+  .formUserSettings__ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .formUserSettings__ul__li {
+      display: flex; }
+      .formUserSettings__ul__li span {
+        margin: 1rem; }
+
+.containerBtn {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 5%; }
+
+.editar {
+  color: #366BE7;
+  font-size: .6em;
+  user-select: none;
+  cursor: pointer;
+  border-bottom: dashed 1px #366BE7;
+  align-self: center;
+  justify-self: center; }
+
+.dateUser {
+  color: rgba(24, 23, 23, 0.9);
+  font-style: italic;
+  font-weight: 900; }
+
+.passChangeBtn {
+  background: rgba(24, 23, 23, 0.9);
+  padding: 1rem;
+  color: whitesmoke;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer; }
+
+.confirmarBtn {
+  background: #366BE7;
+  padding: 1rem;
+  color: whitesmoke;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer; }
+
 .indexMain {
   display: flex;
   flex-direction: column; }
@@ -1128,6 +1182,10 @@ h2, h3, h3, h5, h6 {
   .containerBlog__aside {
     margin-bottom: 25%; }
 
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
 .mainPost {
   display: flex;
   flex-direction: column; }
@@ -1372,4 +1430,12 @@ h2, h3, h3, h5, h6 {
   .postCorto__pic {
     filter: blur(2px); }
   .catH1 {
-    font-size: 3em; } }
+    font-size: 3em; }
+  .footerPost {
+    flex-direction: column; }
+  .mainPost__footer {
+    flex-direction: column; }
+  .catGrid::before {
+    width: 100%; }
+  .catGrid__h3 {
+    opacity: 1; } }
