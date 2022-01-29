@@ -52,6 +52,8 @@
     margin: 5% 0
     font-size: 2.3rem
     text-transform: uppercase
+    border-radius: 10px
+    box-shadow: 1px 1px 5px gray
 .verificate
     margin: 2rem 1rem
     text-decoration: none
@@ -90,11 +92,16 @@
         color: $black
         text-align: justify-all
 .plus
-    margin-left: 10%
     background: $blueLight
-    padding: .5rem
+    padding: .5rem 1rem
     color: $white
     text-decoration: none
+    position: relative
+    top: 0
+    left: 33%
+    border-radius: 10px
+    user-select: none
+    cursor: pointer
 /////// elements
 .column-dash
     display: flex
@@ -112,9 +119,10 @@
         display: flex
         align-items: center
         justify-content: space-between
+        height: 80px
 .usernav
     color: $white
-    margin-left: 3%
+    margin-left: 5%
 .a-dash
     font-size: 1.1rem
     padding: 1rem
@@ -133,7 +141,6 @@
   left: 0
   background-color: $black
   overflow-y: hidden
-  padding-top: 4rem
   transition: 0.5s
 .openbtn
     font-size: 2rem
@@ -142,6 +149,7 @@
     display: flex
     color: $white
     justify-content: flex-end
+    margin-right: 5%
 .dropdown-container
     display: none
     flex-direction: column
@@ -207,24 +215,50 @@
     display: flex
     flex-direction: column-reverse
 /////////form
+.formD
+    position: fixed
+    top: 20%
+    left: 25%
+    background: $white
+    z-index: 1155
+    width: 70%
+    border-radius: 10px
+    align-items: flex-end
 .formDash
     display: flex
     flex-direction: column
-    width: 60%
+    width: 90%
     margin: 5%
+    label
+        margin: 1rem 0
     input
         font-family: exo
-        border: solid 1px gray
+        border: none
+        background: $whiteRGBA
         padding: .5rem
         margin: .1rem
+        border-radius: 10px
+        box-shadow: 2px 2px 1px $blueLightTransparent7
     textarea
+        border: none
         resize: none
+        box-shadow: 2px 2px 1px $blueLightTransparent7
+        border-radius: 10px
+.housing, .rigs, .soporte, .placas
+    display: none
 ///////////informe
 .informe
-    display: grid
+    display: none
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: 10% 10% 10% 10% 10%
-    margin: 10%
+    background: $white
+    padding: 1rem
+    margin: 1rem
+    width: 80%
+    position: fixed
+    top: 0%
+    left: 10%
+    z-index: 55
     &__usuario, &__email, &__tel, &__asunto, &__tipo, &__status
         display: flex
         margin: 1rem
@@ -266,6 +300,8 @@
         color: $black
         font-weight: 700
         margin-right: 5%
+.show-grid
+    display: grid
 //////////btn
 .btndash
     padding: 1rem
@@ -274,6 +310,7 @@
 .formbtn
     align-self: flex-end
     margin: 1rem 0
+    border-radius: 10px
 /////////////import css-variables from
 .formUserSettings
     display: flex
@@ -323,3 +360,7 @@
     border-radius: 10px
     user-select: none
     cursor: pointer
+.drop-content
+    display: none
+.show
+    display: flex

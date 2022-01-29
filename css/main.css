@@ -570,7 +570,9 @@ h2, h3, h3, h5, h6 {
   padding: 1rem;
   margin: 5% 0;
   font-size: 2.3rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray; }
 
 .verificate {
   margin: 2rem 1rem;
@@ -612,11 +614,16 @@ h2, h3, h3, h5, h6 {
     text-align: justify-all; }
 
 .plus {
-  margin-left: 10%;
   background: cadetblue;
-  padding: .5rem;
+  padding: .5rem 1rem;
   color: whitesmoke;
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  left: 33%;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer; }
 
 .column-dash {
   display: flex;
@@ -635,11 +642,12 @@ h2, h3, h3, h5, h6 {
   .dash-nav__header {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    height: 80px; }
 
 .usernav {
   color: whitesmoke;
-  margin-left: 3%; }
+  margin-left: 5%; }
 
 .a-dash {
   font-size: 1.1rem;
@@ -659,7 +667,6 @@ h2, h3, h3, h5, h6 {
   left: 0;
   background-color: #181717;
   overflow-y: hidden;
-  padding-top: 4rem;
   transition: 0.5s; }
 
 .openbtn {
@@ -669,7 +676,8 @@ h2, h3, h3, h5, h6 {
 .closebtn {
   display: flex;
   color: whitesmoke;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-right: 5%; }
 
 .dropdown-container {
   display: none;
@@ -742,24 +750,52 @@ h2, h3, h3, h5, h6 {
   display: flex;
   flex-direction: column-reverse; }
 
+.formD {
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  background: whitesmoke;
+  z-index: 1155;
+  width: 70%;
+  border-radius: 10px;
+  align-items: flex-end; }
+
 .formDash {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 90%;
   margin: 5%; }
+  .formDash label {
+    margin: 1rem 0; }
   .formDash input {
     font-family: exo;
-    border: solid 1px gray;
+    border: none;
+    background: rgba(245, 245, 245, 0.5);
     padding: .5rem;
-    margin: .1rem; }
+    margin: .1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(95, 158, 160, 0.7); }
   .formDash textarea {
-    resize: none; }
+    border: none;
+    resize: none;
+    box-shadow: 2px 2px 1px rgba(95, 158, 160, 0.7);
+    border-radius: 10px; }
+
+.housing, .rigs, .soporte, .placas {
+  display: none; }
 
 .informe {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 10% 10% 10% 10% 10%;
-  margin: 10%; }
+  background: whitesmoke;
+  padding: 1rem;
+  margin: 1rem;
+  width: 80%;
+  position: fixed;
+  top: 0%;
+  left: 10%;
+  z-index: 55; }
   .informe__usuario, .informe__email, .informe__tel, .informe__asunto, .informe__tipo, .informe__status {
     display: flex;
     margin: 1rem; }
@@ -802,6 +838,9 @@ h2, h3, h3, h5, h6 {
     font-weight: 700;
     margin-right: 5%; }
 
+.show-grid {
+  display: grid; }
+
 .btndash {
   padding: 1rem;
   background: #181717;
@@ -809,7 +848,8 @@ h2, h3, h3, h5, h6 {
 
 .formbtn {
   align-self: flex-end;
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  border-radius: 10px; }
 
 .formUserSettings {
   display: flex;
@@ -864,6 +904,12 @@ h2, h3, h3, h5, h6 {
   border-radius: 10px;
   user-select: none;
   cursor: pointer; }
+
+.drop-content {
+  display: none; }
+
+.show {
+  display: flex; }
 
 .indexMain {
   display: flex;
