@@ -614,8 +614,8 @@ h2, h3, h3, h5, h6 {
     text-align: justify-all; }
 
 .plus {
-  background: cadetblue;
-  padding: .5rem 1rem;
+  background: rgba(24, 23, 23, 0.3);
+  padding: .67rem 2rem;
   color: whitesmoke;
   text-decoration: none;
   position: relative;
@@ -624,6 +624,8 @@ h2, h3, h3, h5, h6 {
   border-radius: 10px;
   user-select: none;
   cursor: pointer; }
+  .plus:hover {
+    background: #366BE7; }
 
 .column-dash {
   display: flex;
@@ -742,7 +744,10 @@ h2, h3, h3, h5, h6 {
 
 .subDrop {
   margin: 1rem;
-  padding: .3rem; }
+  padding: .3rem;
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase; }
   .subDrop:hover {
     background: #366BE7; }
 
@@ -910,6 +915,14 @@ h2, h3, h3, h5, h6 {
 
 .show {
   display: flex; }
+
+.irAlBlog {
+  display: flex;
+  text-decoration: none;
+  color: whitesmoke;
+  text-transform: uppercase; }
+  .irAlBlog:hover {
+    color: cadetblue; }
 
 .indexMain {
   display: flex;
