@@ -949,8 +949,9 @@ h2, h3, h3, h5, h6 {
 
 .container {
   margin: 5%; }
-  .container input {
-    margin: 5%; }
+  .container input, .container select {
+    margin: 5%;
+    padding: .2rem; }
 
 .rowPost {
   display: flex;
@@ -991,11 +992,13 @@ h2, h3, h3, h5, h6 {
 .flex-column {
   display: flex;
   flex-direction: column;
-  margin: .1rem; }
+  margin: .1rem;
+  justify-content: space-around; }
 
 .flex-row {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 150px; }
 
 .indexMain {
   display: flex;
