@@ -7,6 +7,7 @@
         width: 100%
         align-items: center
         position: relative
+    
         &__zod
             color: $black
             border-radius: 60px 20px 60px 20px
@@ -67,10 +68,13 @@
             cursor: pointer
             font-size: .9em
         &__black
-            background: $blackTransparent
+            background: $black
             color: $white
             border: none
             border-radius: 10px
+            position: relative
+            top: 0
+            z-index: 1000
 .fa-user
     margin: .4rem
     font-size: 1rem
@@ -87,20 +91,34 @@
     padding: 1rem
     align-self: center
 ////////////fin de navbar
-.dropdown-content
+.modal
     display: none
-.dropdown-cat
-    display: none
-    flex-direction: column
+    width: 100%
+    height: 100vh
     position: absolute
-    top: 68%
-    right: 18%
-    background: $white
-    padding: 0 2rem
+    top: 0
+    left: 0
+    z-index: 1070
+.modalAside
+    display: none
+    width: 84.8%
+    height: 100vh
+    position: absolute
+    top: 0
+    right: 0%
+    z-index: 1070
+.dropdown-cat
+    display: flex
+    flex-direction: row
+    position: absolute
+    top: 11%
+    right: 1%
+    background: $black
     border-radius: 10px
     overflow: hidden
-    &__a
-        color: $blackTransparent
+    width: 45%
+    a
+        color: $white  
         text-decoration: none
         margin: 1rem
         padding: .1rem .3rem
@@ -110,5 +128,5 @@
 .btnreset
     border: none
     background: none
-.topnav #myLinks
+#hamburguer
     display: none

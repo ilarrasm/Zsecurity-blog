@@ -1,80 +1,74 @@
+//dash aside
+//user
+let btnUser = document.getElementById("botonUser");
+let contenedor = document.getElementById("userDate");
+let contenedorCat = document.getElementById("categorias");
+//cat
+let btnCat = document.getElementById("btnCat");
+/// aside
+let asideBtn = document.getElementById("asideBtn");
+const asideContainer = document.getElementById("asideContainer");
+let asideOpen = document.querySelector(".aside-open")
+///plus
+let plus = document.querySelectorAll(".plus");
+//modal
+let modal = document.querySelector(".modal");
+// 
 
-function hamburguesa() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
+
+function togglear(btn, contain){
+  // validar
+  if(btn && contain){
+    console.log(btn, contain)
+    let modalAside = document.querySelector(".modalAside");
+    let modal = document.querySelectorAll(".modal");
+    function TogleOk(){
+    console.log(btn, contain)
+    if(btn === document.getElementById("asideBtn")){
+      dashNav = document.querySelector(".dash-nav");
+      dashNav.classList.add("aside-open")
+      modalAside.classList.add("show")
+      modalAside.addEventListener("click", ()=>{
+        contain.style.display = "none"
+      })
+      contain.style.display = "flex"
+    }else{
+          modal.forEach(element => {
+            element.addEventListener("click", ()=>{
+              contain.classList.remove("show");
+            })
+          })
+        contain.classList.toggle("show")
+      }
+    }
+    btn.addEventListener("click", TogleOk)
   }
-} 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "22%";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
 }
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-}
-function userDrop() {
-  document.getElementById("userDate").classList.toggle("show");
-}
-function userDropCat(){
-  document.getElementById("categorias").classList.toggle("show");
-}
+
+
+togglear(btnUser, contenedor)
+togglear(btnCat, contenedorCat)
+togglear(asideBtn, asideContainer)
+togglear()
+///////menu hamburguesa
+function responsiveMobile(){
+  let x = document.querySelector(".nav");
+  let btn = document.getElementById("hamburguer")  
+  if (window.innerWidth <  800) { // If media query matches
+    function hamburguesa() {
+      if (x.style.display === "flex") {
+          x.style.display = "none";
+      }else {
+        x.style.display = "flex";
+      }
+    }
+    btn.addEventListener("click", hamburguesa);
+  }
+  }
+responsiveMobile()
 /////////////////////////////
-const botom = document.querySelector(".dropdownBtn");
-const contenedorDrop = document.querySelector(".drop-content")
-const classes = contenedorDrop.classList;
-
-botom.addEventListener('click', function() {
-  const result = classes.toggle("show");
-  console.log(botom.addEventListener)
-});
-let botomInfo = document.querySelector(".plus");
-const infoContent = document.querySelector(".informe");
-botomInfo.addEventListener('click', function(){
-  let contendorClass = infoContent.classList; 
-  contendorClass.toggle("show-grid");
-});
-let btnHousing = document.querySelector(".housingB");
-let btnRig = document.querySelector(".rigB");
-let btnPlacas = document.querySelector(".placasB");
-let btnSoporte = document.querySelector(".soporteB")
-let contenedorForm = document.querySelectorAll(".formD");
-btnHousing.addEventListener('click', function(){
-  let contenedorClasse = contenedorForm[0].classList;
-  contenedorClasse.toggle("housing");
-  contenedorForm[1].classList.add("rigs");
-  contenedorForm[2].classList.add("placas")
-  contenedorForm[3].classList.add("soporte")
-});
-btnRig.addEventListener('click', function(){
-  let contenedorClasse = contenedorForm[1].classList;
-  contenedorClasse.toggle("rigs");
-  contenedorForm[0].classList.add("housing")
-  contenedorForm[2].classList.add("placas")
-  contenedorForm[3].classList.add("soporte")
-});
-btnPlacas.addEventListener('click', function(){
-  let contenedorClasse = contenedorForm[2].classList;
-  contenedorClasse.toggle("placas");
-  contenedorForm[0].classList.add("housing")
-  contenedorForm[1].classList.add("rigs")
-  contenedorForm[3].classList.add("soporte")
-});
-btnSoporte.addEventListener('click', function(){
-  let contenedorClasse = contenedorForm[3].classList;
-  contenedorClasse.toggle("soporte");
-  contenedorForm[0].classList.add("housing")
-  contenedorForm[1].classList.add("rigs")
-  contenedorForm[2].classList.add("placas")
-  
-
-});
 /////////////carrusel
 function carrouselStart(){
-    
-    
   const carouselSlide = document.querySelector('.carrousel');
   const carouselImages = document.querySelectorAll('.carrousel__container');
   ///bbuttons
@@ -82,9 +76,7 @@ function carrouselStart(){
   const nextBtn = document.querySelector('#nextBtn');
   //counter
   const size = carouselImages[0].clientWidth;
-
   carouselSlide.style.transform = `translateX(${-size*1}px)`;
-  
   let inMove = false;
   let lastMove;
 
@@ -136,9 +128,22 @@ function carrouselStart(){
   });
   setTimeout(nextSlide, 4000);
 }
-/*
-document.addEventListener("DOMContentLoaded",()=>{
 
-  carrouselStart();
+  
+document.addEventListener("DOMContentLoaded",()=>{
+  if(document.querySelector('.carrousel')){
+    carrouselStart();
+  }
 });
-*/
+/////
+let presupuestoBtn = document.querySelector(".dropdownBtn")
+let contenedorPresupuesto = document.querySelector(".drop-content");
+presupuestoBtn.addEventListener("click", ()=> {
+contenedorPresupuesto.classList.toggle("show");})
+function previsualizar(){
+  let boton = document.getElementById("previsualizar")
+  boton.addEventListener("click", ()=>{
+    document.querySelector(".noPrev").classList.toggle("prev")
+  })
+}
+previsualizar();

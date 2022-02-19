@@ -16,70 +16,42 @@
                 <span class="logo__sub">Tu blog sobre cryptocurrency</span>
                 <!-- <img src="media/logo.svg" alt="Logo de Zod Security" class="logo__img"> -->
             </picture>
-            <ul class="nav">
+            <ul id="nav" class="nav">
                 <li class="nav__li">
                     <a class="nav__li__a" href="#">news</a>
                 </li>
-                <li class="nav__li"> 
+                <li class="nav__li black"> 
                     <div class="dropdown">
-                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
+                        <button id="btnCat" class="dropbtn nav__li__a nav__li__black">
                             Categorias
                         </button>
-                        <div id="categorias"class="dropdown-cat box-shadow">
-                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                        <div id="categorias" class="modal">
+                                <div class="dropdown-cat">
+                                    <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                                </div>
                         </div>
                   </div>
                 </li>
                 <li class="nav__li">
-                    <button onclick="userDrop()" class="nav__li__a btnreset">
-                            <i class="fas fa-user"></i>
-                            <div id="userDate" class="dropdown-user box-shadow">
-                                <a  class="dropdown-user__a" href="#">Sign out</a>
-                                <a  class="dropdown-user__a" href="#">Logín</a>
-                            </div>
+                    <button id="botonUser" class="nav__li__a btnreset">
+                        <i class="fas fa-user"></i>
                     </button>
+                        <div id="userDate" class="modal">
+                            <div class="dropdownUser">
+                                <a  class="dropdownUser__a" href="#">Signout</a>
+                                <a  class="dropdownUser__a" href="#">Login</a>
+                            </div>
+                        </div>
                 </li>
             </ul>
-            <div class="topnav">
-                <!-- Navigation links (hidden by default) -->
-                <div id="myLinks">
-                    <a class="nav__li__a" href="#news">News</a>
-                    <div class="dropdown">
-                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
-                            Categorias
-                        </button>
-                        <div id="categorias"class="dropdown-cat box-shadow">
-                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
-                        </div>
-                    </div>
-                    <button onclick="userDrop()" class="nav__li__a btnreset">
-                        <i class="fas fa-user"></i>
-                        <div id="userDate" class="dropdown-user box-shadow">
-                            <a  class="dropdown-user__a" href="#">Sign out</a>
-                            <a  class="dropdown-user__a" href="#">Logín</a>
-                        </div>
-                    </button>
-                </div>
-                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                <href="javascript:void(0);" class="icon" onclick="hamburguesa()">
-                    <i class="fa fa-bars"></i>
-                </a>
+            <span id="hamburguer">
+                <i class="fa fa-bars"></i>
+            </span>
         </nav>
         <!--Carrousel-->
         <div class="containerCaru">
             <button id="prevBtn" class="carrousel__arrowLeft"><i class="fas fa-chevron-left"></i></button>
             <article class="carousel-slide carrousel">
-                <!--<section  class="carrousel__container carousel-card" id="lastClone">
-                    <img src="media/amd.jpg" alt="" class="carrousel__container__img">
-                    <div class="carrousel__container__post">
-                        <h1 class="H1">AMD SUPERA A SU COMPETIDOR</h1>
-                        <p class="carrousel__container__post__p">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quia mollitia vel quae perspiciatis facere fugiat delectus, veritatis cupiditate expedita sint neque quibusdam rerum numquam perferendis dolore nesciunt inventore voluptatum.
-                        </p>
-                        <span class="carrousel__container__post__date">20 de diciembre del 2021</span>
-                        <a href="" class="carrousel__container__post__a">Seguir Leyendo</a>
-                    </div> 
-                </section>-->
                 <section class="carrousel__container carousel-card">
                     <img src="media/pruebapic.jpg" alt="" class="carrousel__container__img">
                     <div class="carrousel__container__post">

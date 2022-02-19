@@ -14,6 +14,7 @@
     color: $white
     text-transform: uppercase
     margin: 1rem
+    user-select: none
 .user-pic 
     margin-right: 2rem
     img
@@ -106,7 +107,6 @@
         background: $blue
 /////// elements
 .column-dash
-    display: flex
     flex-direction: column
 .row-dash
     display: flex
@@ -144,6 +144,9 @@
   background-color: $black
   overflow-y: hidden
   transition: 0.5s
+.aside-open
+    width: 15vw
+    z-index: 1300
 .openbtn
     font-size: 2rem
     margin: 1rem
@@ -191,17 +194,17 @@
     cursor: pointer
     &:hover
         color: $blue
-.dropdown-user
-    display: none
-    flex-direction: column
+.dropdownUser
+    display: flex
+    flex-direction: row
     position: absolute
-    top: 60%
+    top: 11%
     right: 5%
-    background: $white
+    background: $black
     padding: 0 2rem
     border-radius: 10px
     &__a
-        color: $blackTransparent
+        color: $white
         text-decoration: none
         margin: 1rem
         padding: .1rem .3rem
@@ -216,9 +219,8 @@
     text-transform: uppercase
     &:hover
         background: $blue
-.show
+.showF
     display: flex
-    flex-direction: column-reverse
 /////////form
 .formD
     position: fixed
@@ -248,9 +250,7 @@
         border: none
         resize: none
         box-shadow: 2px 2px 1px $blueLightTransparent7
-        border-radius: 10px
-.housing, .rigs, .soporte, .placas
-    display: none
+        border-radius: 10px 
 ///////////informe
 .informe
     display: none
@@ -367,6 +367,7 @@
     cursor: pointer
 .drop-content
     display: none
+    flex-direction: column
 .show
     display: flex
 .irAlBlog
@@ -376,3 +377,44 @@
     text-transform: uppercase
     &:hover
         color: $blueLight
+.container
+    margin: 5%
+    input
+        margin: 5%
+.rowPost
+    display: flex
+    justify-content: space-between
+#publicar, #guardar, #previsualizar
+    margin: 1rem
+    padding: 1rem
+    background: $black
+    color: $white
+    border: none
+    user-select: none
+    cursor: pointer
+    &:hover
+        background: $blue
+#previsualizar
+    display: flex
+    align-self: flex-end
+.noPrev
+    display: none
+.prev
+    display: flex
+    flex-direction: column
+.tittlePostInput
+    display: flex
+    font-size: 1em
+    font-weight: 100
+    border: solid 1px $black
+    margin: .2rem
+    padding: .2rem
+    align-self: flex-start
+    width: 300px  
+.flex-column
+    display: flex
+    flex-direction: column
+    margin: .1rem
+.flex-row
+    display: flex
+    justify-content: space-between
