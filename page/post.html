@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62128bd7a311b1001939fa73&product=inline-share-buttons" async="async"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <title>Document</title>
@@ -16,54 +17,37 @@
                 <span class="logo__sub">Tu blog sobre cryptocurrency</span>
                 <!-- <img src="media/logo.svg" alt="Logo de Zod Security" class="logo__img"> -->
             </picture>
-            <ul class="nav">
+            <ul id="nav" class="nav">
                 <li class="nav__li">
                     <a class="nav__li__a" href="#">news</a>
                 </li>
-                <li class="nav__li"> 
+                <li class="nav__li black"> 
                     <div class="dropdown">
-                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
+                        <button id="btnCat" class="dropbtn nav__li__a nav__li__black">
                             Categorias
                         </button>
-                        <div id="categorias"class="dropdown-cat box-shadow">
-                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                        <div id="categorias" class="modal">
+                                <div class="dropdown-cat">
+                                    <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
+                                </div>
                         </div>
                   </div>
                 </li>
                 <li class="nav__li">
-                    <button onclick="userDrop()" class="nav__li__a btnreset">
-                            <i class="fas fa-user"></i>
-                            <div id="userDate" class="dropdown-user box-shadow">
-                                <a  class="dropdown-user__a" href="#">Sign out</a>
-                                <a  class="dropdown-user__a" href="#">Logín</a>
-                            </div>
+                    <button id="botonUser" class="nav__li__a btnreset">
+                        <i class="fas fa-user"></i>
                     </button>
+                        <div id="userDate" class="modal">
+                            <div class="dropdownUser">
+                                <a  class="dropdownUser__a" href="#">Signout</a>
+                                <a  class="dropdownUser__a" href="#">Login</a>
+                            </div>
+                        </div>
                 </li>
             </ul>
-            <div class="topnav">
-                <!-- Navigation links (hidden by default) -->
-                <div id="myLinks">
-                    <a class="nav__li__a" href="#news">News</a>
-                    <div class="dropdown">
-                        <button class="dropbtn nav__li__a nav__li__black" onclick="userDropCat()">
-                            Categorias
-                        </button>
-                        <div id="categorias"class="dropdown-cat box-shadow">
-                            <a class="dropdown-user__a" href="">Reseñas</a><a class="dropdown-user__a" href="">Editorial</a><a class="dropdown-user__a" href="">bitcoin</a><a class="dropdown-user__a" href="">Ethereum</a>
-                        </div>
-                    </div>
-                    <button onclick="userDrop()" class="nav__li__a btnreset">
-                        <i class="fas fa-user"></i>
-                        <div id="userDate" class="dropdown-user box-shadow">
-                            <a  class="dropdown-user__a" href="#">Sign out</a>
-                            <a  class="dropdown-user__a" href="#">Logín</a>
-                        </div>
-                    </button>
-                </div>
-                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                <href="javascript:void(0);" class="icon" onclick="hamburguesa()">
-                    <i class="fa fa-bars"></i>
-                </a>
+            <span id="hamburguer">
+                <i class="fa fa-bars"></i>
+            </span>
         </nav>
     </header>
     <main class="mainPost">
@@ -125,11 +109,7 @@
                 <div class="share">
                     <h6>Compartir</h6>
                     <div class="share__share">
-                        <span class="iconRs"><i class="fab fa-linkedin-in"></i></span>
-                        <span class="iconRs"><i class="fab fa-facebook-square"></i></span>
-                        <span class="iconRs"><i class="fab fa-twitter"></i></span>
-                        <span class="iconRs"><i class="fab fa-instagram"></i></span>
-                        <span class="iconRs"><i class="fab fa-twitch"></i></span>
+                        <div class="sharethis-inline-share-buttons"></div>
                     </div>
                 </div>
             </section>
@@ -182,5 +162,6 @@
             </div>
         </section>
     </footer>
+    <script src="../script/app.js"></script>
 </body>
 </html>

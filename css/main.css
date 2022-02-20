@@ -1323,6 +1323,7 @@ h2, h3, h3, h5, h6 {
 
 .catGrid {
   height: 15vh;
+  width: 100%;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
