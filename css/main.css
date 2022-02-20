@@ -1020,7 +1020,8 @@ h2, h3, h3, h5, h6 {
 
 .checkes {
   width: 100%;
-  margin: .5rem 0; }
+  margin: .5rem 0;
+  list-style: none; }
   .checkes span {
     margin-left: 5px; }
   .checkes input {
@@ -1048,10 +1049,12 @@ h2, h3, h3, h5, h6 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 1px 1px 2px #366BE7; }
+  box-shadow: 1px 1px 2px #366BE7;
+  cursor: pointer; }
   .imgUp label {
     color: whitesmoke;
-    font-size: .8em; }
+    font-size: .8em;
+    padding: 2rem; }
 
 #update {
   display: none; }
