@@ -1015,7 +1015,7 @@ h2, h3, h3, h5, h6 {
 .newPost {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr 2fr;
   margin: 1rem; }
 
 .checkes {
