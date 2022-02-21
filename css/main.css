@@ -961,7 +961,7 @@ h2, h3, h3, h5, h6 {
     text-transform: capitalize;
     margin: 0rem 1rem 1rem 0; }
 
-#publicar, #guardar, #previsualizar {
+#publicar, #guardar, #previsualizar, .btnGeneric {
   margin: .2rem;
   padding: .5rem 1rem;
   background: #366BE7;
@@ -974,7 +974,7 @@ h2, h3, h3, h5, h6 {
   align-self: center;
   justify-self: center;
   box-shadow: 1px 1px 2px #366BE7; }
-  #publicar:hover, #guardar:hover, #previsualizar:hover {
+  #publicar:hover, #guardar:hover, #previsualizar:hover, .btnGeneric:hover {
     background: cadetblue;
     box-shadow: 1px 1px 2px cadetblue; }
 
@@ -1017,6 +1017,9 @@ h2, h3, h3, h5, h6 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr 2fr;
   margin: 1rem; }
+
+.checkesCon {
+  list-style: none; }
 
 .checkes {
   width: 100%;
